@@ -12,7 +12,10 @@ public struct ArtNzx: ArtNetPacket, Equatable, Hashable, Codable {
     /// ArtNet packet code.
     public static var opCode: OpCode { return .nzs }
     
-    public static let formatting = ArtNetFormatting(data: [.lightingData: .remainder])
+    public static let formatting = ArtNetFormatting(
+        littleEndian: [CodingKeys.portAddress],
+        data: [.lightingData: .remainder]
+    )
     
     // MARK: - Properties
     
