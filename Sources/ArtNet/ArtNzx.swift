@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ArtNzs: ArtNetPacket, Equatable, Hashable, Codable {
+public struct ArtNzx: ArtNetPacket, Equatable, Hashable, Codable {
     
     /// ArtNet packet code.
     public static var opCode: OpCode { return .nzs }
